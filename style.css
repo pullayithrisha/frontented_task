@@ -2,14 +2,14 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
-  }
-  
-  .container {
+}
+
+.container {
     min-height: 100vh;
     padding: 20px;
-  }
-  
-  .header {
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,79 +19,101 @@ body {
     border-radius: 10px;
     font-size: 1.5rem;
     margin-bottom: 20px;
-  }
-  
-  .icon {
+    position: relative;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Ensure the title and icon take available space */
+}
+
+.icon {
     font-size: 1.3rem;
     cursor: pointer;
-  }
-  
-  .card, .card1 {
+    margin-left: 10px; /* Space between icon and title */
+}
+
+.hamburger {
+    display: none; /* Hidden by default, will show on mobile */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.card, .card1 {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card {
+}
+
+.card {
     background-color: #fff;
-  }
-  
-  .card1 {
+}
+
+.card1 {
     background-color: lightblue;
-  }
-  
-  .btn, .order-button {
+}
+
+.btn, .order-button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .order-overview {
+}
+
+.order-overview {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  .order-button {
+}
+
+.order-button {
     margin-right: 10px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .header {
-      flex-direction: column;
-      align-items: flex-start;
-      font-size: 1.2rem;
+        flex-direction: row; /* Keep header elements in a row on mobile */
+        justify-content: space-between;
+        font-size: 1.2rem;
     }
-  
+
     .icon {
-      font-size: 1rem;
+        font-size: 1.3rem;
     }
-  
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
     .card, .card1 {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .order-button {
-      padding: 8px 15px;
+        padding: 8px 15px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .header {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     .icon {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  
+
+    .hamburger {
+        font-size: 1.5rem;
+    }
+
     .order-button {
-      font-size: 0.9rem;
-      padding: 6px 12px;
+        font-size: 0.9rem;
+        padding: 6px 12px;
     }
-  }
-  
+}
